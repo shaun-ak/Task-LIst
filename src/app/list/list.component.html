@@ -1,0 +1,7 @@
+<ul>
+    <li><span >
+        <label [ngClass]="{'completed': myData.done, 'text-muted':myData.done}" class="my-input">{{myData.title}}</label>
+        <input type="checkbox" [(ngModel)]="myData.done" class="my-checkbox">
+        </span>
+    </li>
+</ul>

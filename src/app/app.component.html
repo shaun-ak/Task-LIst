@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="row align-items-center justify-content-center my-row">
+    <div class="col-3 my-col">
+      
+      <div class="main-section p-2">
+        <div class="p-2"> 
+          <form class="d-flex gap-2">
+              <input type="text" name="form" placeholder="Add a new task" required="required" [(ngModel)]="textValue" class="task-input"/>
+              <button class="btn btn-primary my-btn d-sm-flex gap-1 align-items-center" (click)="AddTask()"><div>ADD</div> <div>TASK</div></button>
+          </form>
+        </div>
+
+        <div>
+          <div *ngFor="let list of data">
+          <app-list [myData]="list"></app-list>
+          </div>
+          <div *ngIf="noTasks" class="no-tasks p-2"><h5>All tasks are completed.<br> Add new Task</h5></div>
+          <button class="btn btn-primary" (click)="clearData()">CLEAR COMPLETED TASKS</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

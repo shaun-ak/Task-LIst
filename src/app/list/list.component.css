@@ -1,0 +1,22 @@
+ul{
+    list-style-type: none;
+    color: purple;
+}
+
+.completed{
+    text-decoration: line-through;
+}
+
+.my-input{
+    width: 280px;
+}
+
+.my-checkbox{
+    border-radius: 100px;
+}
+
+@media screen and (max-width: 400px){
+    .my-input{
+        width: 200px;
+    }
+}
